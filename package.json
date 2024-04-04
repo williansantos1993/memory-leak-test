@@ -1,0 +1,27 @@
+{
+  "name": "memory-leak-test",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "set CLIMEM=8999&& node -r climem index.js",
+    "climem": "npx climem 8999",
+    "test": "npx autocannon -c 100 -d 30 -p 10 http://localhost:3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williansantos1993/memory-leak-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/williansantos1993/memory-leak-test/issues"
+  },
+  "homepage": "https://github.com/williansantos1993/memory-leak-test#readme",
+  "devDependencies": {
+    "autocannon": "^7.6.0",
+    "climem": "^1.0.3"
+  }
+}
